@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "sourceMap": false,
+        "outDir": "lib",
+        "strict": true,
+        "lib": ["esnext", "dom"]
+    }
+}

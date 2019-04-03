@@ -1,0 +1,20 @@
+language: node_js
+
+cache: npm
+
+node_js:
+  - node
+  - lts/Carbon
+
+script:
+  - npm run build
+
+jobs:
+  include:
+    - stage: release
+      node_js: 'lts/*'
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npx semantic-release

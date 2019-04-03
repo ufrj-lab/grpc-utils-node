@@ -1,0 +1,84 @@
+{
+    "name": "@ufrj/grpc-utils",
+    "version": "0.0.0",
+    "description": "",
+    "main": "lib/index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ufrj-lab/grpc-utils-node"
+    },
+    "scripts": {
+        "build": "rm -fr lib && tsc",
+        "lint": "prettier --write '**/*.{yml,json,md,ts}'",
+        "ac:add": "all-contributors add",
+        "commit": "git-cz"
+    },
+    "keywords": [
+        "grpc",
+        "wrappers",
+        "struct",
+        "protobufjs",
+        "typescript",
+        "javascript"
+    ],
+    "author": {
+        "name": "Vinícius Carvalho",
+        "email": "viniciuscarvalho@reitoria.ufrj.br"
+    },
+    "license": "AGPL-3.0",
+    "dependencies": {
+        "is": "^3.3.0"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^7.5.2",
+        "@commitlint/config-conventional": "^7.5.0",
+        "@types/is": "0.0.21",
+        "@types/node": "^11.13.0",
+        "all-contributors-cli": "^6.2.0",
+        "commitizen": "^3.0.7",
+        "cz-conventional-changelog": "^2.1.0",
+        "husky": "^1.3.1",
+        "lint-staged": "^8.1.5",
+        "prettier": "^1.16.4",
+        "semantic-release": "^15.13.3",
+        "typescript": "^3.4.1"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "lint-staged": {
+        ".all-contributorsrc": [
+            "all-contributors generate",
+            "git add"
+        ],
+        "{.,}*.{yml,json,md}": [
+            "prettier --write '**/*.{yml,json,md,ts}'",
+            "git add"
+        ]
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    },
+    "prettier": {
+        "singleQuote": true,
+        "bracketSpacing": true,
+        "printWidth": 80,
+        "trailingComma": "all",
+        "semi": false,
+        "arrowParens": "avoid",
+        "proseWrap": "always"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

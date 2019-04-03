@@ -1,0 +1,6 @@
+.editorconfig
+.all-contributorsrc
+.travis.yml
+tsconfig.json
+src
+*.tgz

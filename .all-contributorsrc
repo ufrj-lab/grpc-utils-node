@@ -1,0 +1,23 @@
+{
+  "projectName": "grpc-utils-node",
+  "projectOwner": "ufrj-lab",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "vinyfc93",
+      "name": "Vinícius Carvalho",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/18464132?v=4",
+      "profile": "http://ufrj.br",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
